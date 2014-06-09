@@ -1,0 +1,63 @@
+\documentclass{article}
+\usepackage[latin1]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{multirow}
+\usepackage{threeparttable}
+\usepackage{lscape}
+\usepackage{fancyhdr}
+\usepackage[toc]{glossaries}
+\usepackage{url}
+\usepackage{pdfpages}
+\makeglossaries
+\pagestyle{fancy}
+\fancyhead[LE,RO]{\slshape \rightmark}
+\fancyhead[LO,RE]{\slshape \leftmark}
+\fancyfoot[C]{\thepage}
+\fancyfoot[L]{Gennaro Piano}
+\fancyfoot[R]{\today}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\begin{document}
+
+\title{Seminar: Analyse und Angriffe auf Netzwerke  \\ SQL Injection}
+\author{Gennaro Piano}
+\date{\today}
+
+\maketitle
+
+\begin{figure}[htbp]
+		\centering
+	\includegraphics[width=6cm]{img/logo.jpg}
+		\label{fig:logo}
+\end{figure}
+
+\newpage \thispagestyle{empty}
+\tableofcontents
+\newpage \thispagestyle{empty}
+\listoffigures
+\newpage \thispagestyle{empty}
+\listoftables
+\newpage
+\section{Einleitung}
+Dieses Seminar behandelt das Thema Analyse und Angriffe auf Netzwerk. Eine weitverbreitete Art um in einem Netzwerk schaden anzurichten, sind sogenannte SQL Injections. Dieses Projekt befasst sich mit SQL Injections. Dieses Kapitel erklärt den Begriff SQL Injection und befasst sich mit der genauen Aufgabenstellung des Projekts.
+\subsection{Ausgangslage}
+SQL-Injections sind eine häufige Angriffsart, weil sie einfach durchzuführen sind und sehr effizient sein können. SQL-Injections sind eingeschleuste SQL Abfragen, welche einem nicht autorisiertem Benutzer Zugriff zur Datenbank gewähren. Somit kann ein nicht autorisierter Benutzer Daten aus der Datenbank lesen oder gar ändern und löschen. 
+\subsection{Ziel der Arbeit}
+Das Ziel dieser Arbeit ist es aufzuzeigen, was mit SQL Injections alles möglich ist und wie man Anwendung gegen SQL Injections schützen kann. Der Seminarbericht soll die Analyse dieser Schwachstelle beinhalten. Nebenbei soll eine Testumgebung entwickelt werden, welche aufzeigt wie Datenbank von Dritten manipuliert werden können und wie man sich vor solchen Angriffen schützen kann.
+\subsection{Aufgabenstellung}
+Es werden zwei grafisch identische Websites erstellt, welche an die gleiche Datenbank angebunden sind. \newline \newline
+Eine Website ist gegen SQL Injections geschützt, die andere nicht. \newline \newline
+Auf beiden Websites wird versucht anhand von SQL Injections Daten aus der Datenbank zu lesen und zu ändern.
+\subsection{Erwartete Resultate}
+Als Resultat wird eine Dokumentation erwartet, welche die Resultate dokumentiert und wie man sich gegen SQL Injections schützen kann.
+\subsection{Sourcecode}
+Der Sourcecode der Websites wird aus Platzgründen nicht in die Dokumentation eingefügt, jedoch kann er direkt aus dem GitHub Repository heruntergeladen werden. Das Repository befindet sich unter \newline https://github.com/pianogen/Seminararbeit/SQLInjections.
+\subsection{Bemerkung}
+Der praktische Teil dieser Arbeit wird nur zur Analyse der SQL Statements verwendet und wird nie produktiv genutzt, somit wird das gesamte Testverfahren der Applikation nicht berücksichtigt.
+\section{SQL Injections}
+\subsection{Allgemein}
+\subsection{Attacken}
+\subsection{Schutz}
+\end{document}

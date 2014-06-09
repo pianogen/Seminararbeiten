@@ -1,0 +1,32 @@
+\select@language {ngerman}
+\contentsline {section}{Glossary}{3}
+\contentsline {section}{\numberline {1}Einleitung}{5}
+\contentsline {subsection}{\numberline {1.1}Ausgangslage}{5}
+\contentsline {subsection}{\numberline {1.2}Projektbeschreibung}{5}
+\contentsline {subsection}{\numberline {1.3}Ist Zustand}{5}
+\contentsline {subsection}{\numberline {1.4}Erwartete Resultate}{5}
+\contentsline {section}{\numberline {2}Network Access Protection}{6}
+\contentsline {subsection}{\numberline {2.1}Was ist \gls {NAP}}{6}
+\contentsline {subsection}{\numberline {2.2}Die f\"unf Methoden}{7}
+\contentsline {subsubsection}{\numberline {2.2.1}DHCP NAP Enforcement Methode}{7}
+\contentsline {subsubsection}{\numberline {2.2.2}IPSec NAP Enforcement Methode}{11}
+\contentsline {subsubsection}{\numberline {2.2.3}IEEE802.1x NAP Enforcement Methode}{11}
+\contentsline {subsubsection}{\numberline {2.2.4}VPN NAP Enforcement Methode}{12}
+\contentsline {subsubsection}{\numberline {2.2.5}TS Gateway NAP Enforcement Methode}{12}
+\contentsline {subsection}{\numberline {2.3}Auto Remediation}{13}
+\contentsline {section}{\numberline {3}Ablauf einer NAP Abfrage}{14}
+\contentsline {section}{\numberline {4}Vergleich}{15}
+\contentsline {subsection}{\numberline {4.1}Anmerkung}{15}
+\contentsline {subsection}{\numberline {4.2}Methodenvergleich}{15}
+\contentsline {subsection}{\numberline {4.3}Konkurrenzprodukte}{15}
+\contentsline {section}{\numberline {5}Theoretische Umsetzung}{16}
+\contentsline {subsection}{\numberline {5.1}Allgemein}{16}
+\contentsline {subsection}{\numberline {5.2}DHCP NAP Enforcement Methode}{16}
+\contentsline {subsection}{\numberline {5.3}802.1x NAP Enforcement Methode}{16}
+\contentsline {subsection}{\numberline {5.4}IPSec NAP Enforcement Methode}{17}
+\contentsline {section}{\numberline {6}Bewertung von Network Access Protection}{18}
+\contentsline {subsection}{\numberline {6.1}Pro und Kontra}{18}
+\contentsline {subsection}{\numberline {6.2}Empfehlung}{18}
+\contentsline {section}{\numberline {7}Anhang}{19}
+\contentsline {subsection}{\numberline {7.1}Zeitaufwand}{19}
+\contentsline {subsection}{\numberline {7.2}Review}{19}

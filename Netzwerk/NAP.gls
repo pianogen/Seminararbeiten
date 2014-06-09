@@ -1,0 +1,31 @@
+\glossarysection[\glossarytoctitle]{\glossarytitle}\glossarypreamble
+\begin{theglossary}\glossaryheader
+\glsgroupheading{F}\relax \glsresetentrylist %
+\glsnonextpages \glossaryentryfield{FreeNac}{\glsnamefont{FreeNac}}{Eine Software basierend auf OpenSource. Es setzt anhand von MAC Adressen oder Ports, Clients in ein spezifisches VLAN}{\relax }{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{3}}}\glsgroupskip
+\glsgroupheading{N}\relax \glsresetentrylist %
+\glsnonextpages \glossaryentryfield{NAP}{\glsnamefont{NAP}}{Abkürzung für Network Access Protection}{\relax }{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{2\delimN 3}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{5}}}%
+\glsnonextpages \glossaryentryfield{NAP Agent}{\glsnamefont{NAP Agent}}{Dienst der auf dem Client läuft, ist die Schnittstelle von NAP}{\relax }{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{3}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{9}}}%
+\glsnonextpages \glossaryentryfield{NPS}{\glsnamefont{NPS}}{Network Policy Server, Netzwerkkomponente von Windows Server 2008, um Netzwerkzugriffsrichtlinien zu erstellen}{\relax }{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{3}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{5}}}\glsgroupskip
+\glsgroupheading{S}\relax \glsresetentrylist %
+\glsnonextpages \glossaryentryfield{SHA}{\glsnamefont{SHA}}{System Health Validator; Dieser Dienst erfasst die einzelnen Sicherheitskriterien}{\relax }{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{3}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{7}}}%
+\glsnonextpages \glossaryentryfield{SoH}{\glsnamefont{SoH}}{Statement of Health; Resultat der Sicherheitskritieren}{\relax }{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{3}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{7}}}%
+\glsnonextpages \glossaryentryfield{SoHR}{\glsnamefont{SoHR}}{Statement of Health Response; Enthält Informationen, ob der Client das Sicherheitskriterium bestanden hat}{\relax }{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{3}}}%
+\glsnonextpages \glossaryentryfield{SSoH}{\glsnamefont{SSoH}}{System Statement of Health; Beinhaltet alle SoH und Informationen über das Betriebssytem}{\relax }{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{3}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{7}}}%
+\glsnonextpages \glossaryentryfield{SSoHR}{\glsnamefont{SSoHR}}{System Statement of Health Response; Enthält Zusammenfassung aller SoHR}{\relax }{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{3}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{8}}}%
+\end{theglossary}\glossarypostamble

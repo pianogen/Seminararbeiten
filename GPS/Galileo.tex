@@ -1,0 +1,332 @@
+\documentclass{article}
+\usepackage[latin1]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{multirow}
+\usepackage{threeparttable}
+
+
+
+\begin{document}
+
+
+\title{Seminar: GPS \\
+Galileo \\ Das europäische Navigationssystem}
+\author{Gennaro Piano}
+\date{\today}
+
+\maketitle
+
+\begin{figure}[htbp]
+		\centering
+	\includegraphics[width=10cm]{titelbild.jpg}
+		\label{fig:titelbild2}
+\end{figure}
+
+
+\newpage
+
+
+\tableofcontents
+\newpage
+\section{Einführung}
+Unser Leben ist von GNSS\footnote{Global Navigation Satellite System} geprägt. Was früher nur mit Karten lesen und ein wenig Glück möglich war, ist heute durch Navigationsgeräte ein Kinderspiel. Im beruflichen Umfeld hätte ein Ausfall des amerikanischen GNSS verheerende Folgen. Die EU hat errechnet, dass ein zweitägiger Ausfall im Jahr 2015 dem Transport- und Finanzsektor eine Milliarde Euro kosten würde. Durch die zunehmende Bedeutung dieses Dienstes hat die Europäische Union beschlossen, ein eigenes GNSS zu entwickeln.
+\subsection{Galileo}
+Galileo wird das europäische GNSS und soll das dritte grosse Standbein neben GPS und GLONASS werden.
+Das europäische GNSS wird aus 30 Satelliten und einem Netz aus Bodenstationen bestehen. 
+\subsection{Funktionsweise}
+Alle momentan produktiven GNSS ermitteln die Position des Empfangsgerät nach dem selben Prinzip. Galileo wird auch nach diesem Prinzip funktionieren.
+Die Formel für die Ermittlung beinhaltet vier Unbekannte. Die ersten drei Unbekannten sind die Ortskoordinaten eines dreidimensionalen Raumes. Die vierte Unbekannte ist die Zeitverschiebung, die zwischen dem Satelliten und dem Empfangsgerät entsteht. Diese Verschiebung entsteht, weil der Satellit mit einer Atomuhr arbeitet und das Empfangsgerät nicht.
+\newline
+\newline
+Somit schickt jeder Satellit folgende Daten:
+\begin{enumerate}
+\item Seine Identität
+\item Seine Umlaufbahndaten
+\item Seine Sendezeit
+\end{enumerate}
+Der Satellit sendet das Signal mit Lichtgeschwindigkeit. Da die Geschwindigkeit und die benötigte Zeit für die Übermittlung bekannt sind, kann die Distanz zwischen Satellit und Empfangsgerät berechnet werden. Weil der Satellit Signale ausstrahlt, entsteht um den Satelliten eine sogenannte Signalkugel. Durch die Ermittlung der Distanz kann man die Position des Empfangsgerät auf die Oberfläche der Kugel beschränken. Der Radius der Kugel ist die Distanz vom Empfangsgerät zum Satellit.
+\newpage
+Um den genauen Standort des Geräts zu bestimmen, braucht es nun die Daten von mindestens zwei weiteren Satelliten. Durch die Ermittlung der Distanz der weiteren Satelliten erhält man mindestens zwei weitere Radiuskurven. Die drei Radiuskurven schneiden sich an einem bestimmten Punkt auf der Erde. Dieser Punkt ist die Position des Empfangsgerät. 
+\begin{figure}[htbp]
+\centering
+\includegraphics{pos.jpg}
+\caption{Links: Idealfall, Rechts: Zeit ist nicht identisch}
+\label{fig:position}
+\end{figure}
+
+\parindent0pt Die Genauigkeit der Position ist jedoch noch nicht gewährleistet, da es wichtig ist, dass die Uhr des Empfangsgerät mit der des Satelliten übereinstimmt.
+Bei einer solch hohen Geschwindigkeit können kleinste Zeitunstimmigkeiten zwischen Sender und Empfänger extreme Einbussen bei der Genauigkeit auswirken. Man stelle sich vor; bei einer Geschwindigkeit von 300'000 km/s, was in etwa der Lichtgeschwindigkeit entspricht, und einer Zeitunstimmigkeit von einer Millisekunde verschlechtert sich die Genauigkeit der Ermittlung um 300 km. Mit dieser hohen Ungenauigkeit wäre ein GNSS völlig unbrauchbar. Moderne GNSS Geräte erreichen jedoch eine Genauigkeit von mindestens 30 Metern.
+Diese Genauigkeit ermöglicht ein zusätzlicher Satellit. Dieser Satellit ist wie bereits erwähnt zuständig für die Auflösung der vierten Unbekannten; der Zeit. 
+\newpage
+\section{Geschichte}
+In den achtziger Jahren bemerkte Europa wie wichtig es ist, ein Navigationssystem anzubieten, dass jederzeit verfügbar ist und unter eigener Kontrolle steht. In dieser Zeit begann die Europäische Weltraumorganisation mit dem Erstellen verschiedener Konzepte für ein Navigationssystem.
+\newline
+\newline
+In den neunziger Jahren entschloss sich der Europäische Rat einen zweistufigen Ansatz zu initiieren. Als Erstes hat man eine Erweiterung und somit eine Verbesserung, der schon vorhandenen GNSS\footnote{GPS, GLONASS}, erschaffen. Diese Erweiterung trägt heute den Namen EGNOS\footnote{European geostationary navigation overlay service}. Die Verbesserung durch EGNOS ist nur auf Europa begrenzt. Sie steigert die Genauigkeit der Position von zehn bis 20 Meter auf ein bis drei Meter. Neben der Steigerung der Genauigkeit wird auch die Integritätsinformation\footnote{Benachrichtigung für Endanwender, wenn Positionierungssysteme falsche Daten senden oder der Empfang stark gestört ist} gesendet.
+\newline
+\newline
+Als zweiter Schritt forderte die Europäische Union an, ein eigenständiges GNSS für den zivilen Gebrauch zu iniitieren und die Vorbereitungen dafür zü übernehmen.
+Die EU war auf eine enge Zusammenarbeit mit der USA hinaus und bot dem Land eine gemeinsame Weiterentwicklung von GPS an.
+Die USA schien anfänglich daran interessiert, doch weil es fremden Ländern nicht gestattet ist, die Kontrolle über die sicherheitstechnische Infrastruktur des GPS zu übernehmen, lehnte die USA das Angebot einer Zusammenarbeit ab. Somit lancierten die EU und die ESA ein eigenes Projekt für ein europäisches GNSS und nannten es Galileo. Der Name Galileo stammt vom italienischen Forscher Galileo Galilei ab, dieser hat im 17. Jahrhundert vier Monde des Planeten Jupiter entdeckt. 
+\newline
+\newline
+Im Gegensatz zum amerikanischen Pendant, namens GPS, dass während einer Kriegsphase nur noch für das Militär zur Verfügung steht, wird Galileo während dieser Phase für die Bürger zur Verfügung stehen. Dies führte dazu, dass die USA mit dem Einverständnis für Galileo recht lange zögerte. Die Vorfälle des 11. November 2001 führten zum Entscheid, dass das Projekt anfangs 2002 abgebrochen wurde. Das Projekt wurde ein paar Monate später von der EU wieder aufgenommen. Die Europäische Union hatte festgestellt, dass es wichtig ist, ein freizugängliches GNSS anzubieten, welches die USA im Kriegszustand nicht ohne Weiteres ausschalten kann.
+
+\newpage
+Am 26. Mai 2003 wurde die Definitionsphase des Projekts von der Europäischen Union und der Europäischen Weltraumorganisation als offiziell beendet erklärt. Die Planung des Projekts sah im Mai 2003 folgendermassen aus: 
+\newline
+\begin{itemize}
+\item Die Startkosten bis im Jahr 2005 betragen circa 1.1 Milliarden Euro.
+\item Die 30 benötigten Satelliten sollen im Zeitraum von 2011 bis 2014 in Betrieb genommen werden.
+\item Im Jahr 2019 soll das gesamte Navigationssystem laufen.
+\item Die Gesamtkosten betragen circa 3 Milliarden Euro.
+\item 2/3 der Kosten sollen private Firmen und Investoren übernehmen, der Rest wird zwischen der Europäischen Union und der Europäischen Weltraumorganisation aufgeteilt.
+\end{itemize}
+Diese Planung stimmt mit dem heutigen Stand nicht mehr überein.
+\newline
+\newline
+\parindent0pt
+Im Jahr 2004 einigten sich die Vereinigten Staaten von Amerika und die Europäische Union zu einem Zusammenschluss der beiden Navigationssysteme. Dies hat den Vorteil, dass bei einem Ausfall eines Systems der Benutzer nichts bemerkt.
+\newline
+\newline
+Am 23. Mai 2003 begann die Entwicklungsphase von Galileo. Der erste Testsatellit mit dem Namen GIOVE\footnote{Galileo In-Orbit-Validation-Element}-A1 wurde am 28. Dezember 2005 gestartet und hat am 2. Mai 2007 sein erstes Navigationssignal abgegeben. Am 26. April 2008 folgte der zweite Testsatellit mit dem Namen GIOVE-B. Dieser Satellit war mit einer hochgenauen Atomuhr bestückt. GIOVE-B sendete die ersten hochgenauen Navigationssignale am 7. Mai 2008. Im Februar 2011 begann eine erste grosse Testphase mit Galileo Empfängern. Es war noch ein dritter Testsatellit mit dem Namen GIOVE-A2 geplant, jedoch wurde dieser gestrichen, weil GIOVE-B alle Tests erfolgreich abgeschlossen hatte.
+\newline
+\newline
+Vor knapp einem Jahr, am 21. Oktober 2011, wurden die Satelliten Galileo IOV-1 und IOV-2 erfolgreich von der Erde aus gestartet. Die zwei Satelliten hätten schon am 20. Oktober 2011 die Erde verlassen müssen. Der Start wurde jedoch wegen der Entdeckung einer Anomalie an einem Satelliten vertagt.
+Am 12. Oktober 2012 folgten ihnen die Satelliten Galileo IOV-3 und IOV-4. Diese vier Satelliten sind die ersten produktiven Galileo Satelliten, die ins Weltall geschossen worden sind.  Die ersten zwei Satelliten sind in der ersten Umlaufbahn platziert worden, die zweiten in der zweiten Umlaufbahn. Die vier IOV Satelliten werden das gesamte Galileo System mit den schon errichteten Bodenstationen testen. Ende 2013 sollen die nächsten zwei Satelliten gestartet werden und ihren Platz in der dritten Umlaufbahn finden.
+\newpage
+\section{Projektphasen}
+Galileo wurde in drei Projektphasen unterteilt; die Definitionsphase, die Phase der Entwicklung und der orbitalen Validierung und die Phase der Fertigstellung und des Betriebs.
+\subsection{Definition}
+In der Definitionsphase wurden hauptsächlich die Anforderungen und die Kosten des gesamten Projekts definiert. Neben den Anforderungen wurden auch die Bedürfnisse und Meinungen von zukünftigen Benutzern und Investoren analysiert. Das Resultat der Definitionsphase war die Grundspezifikation für das System, die durch den Einsatz von vier Satelliten der Gesamtkonstellation sowie dem Einsatz der Bodenstationen und der Kontrollzentren validiert werden musste.
+\subsection{Entwicklung und orbitale Validierung}
+In dieser Phase wurden alle Komponenten, die für die Tests benötigt werden, nämlich Satelliten, Bodenstationen und Empfänger, im Detail definiert und hergestellt. Nach der Fertigstellung wurden wie bereits erwähnt die zwei GIOVE Satelliten in Betrieb genommen um erste Tests durchzuführen. Mit dem ersten Satelliten wurde getestet, ob ein Galileosignal über zwei separate Frequenzkanäle übertragen werden kann. Beim zweiten Satelliten wurde getestet, ob ein Galileosignal über drei separate Frequenzkanäle gesendet werden kann.
+Die Tests waren erfolgreich und somit konnten die ersten vier produktiven Satelliten in Betrieb genommen werden.
+\subsection{Fertigstellung und Betrieb}
+Während dieser Phase werden Stück für Stück die benötigten Satelliten und Erdstationen in Betrieb genommen, um die Full operational capability (kurz FOC) zu erreichen. Die FOC ist erreicht, sobald alle 30 Satelliten in Betrieb genommen wurden. Erste Dienste sollen, wenn alles nach Plan verläuft, ab dem Jahr 2014/15 angeboten werden. Die FOC und somit die Verfügbarkeit aller Dienste soll im Jahre 2020 erreicht werden. 
+
+\newpage
+
+\section{Die Dienste}
+Während der Definitionsphase wurden das Projekt in drei verschiedene Stufen eingeteilt:
+\begin{enumerate}
+\item \textbf{Satellite-Only Service} \newline
+Der Dienst soll weltweit und unabhängig von anderen Navigationssysteme angeboten werden.
+\item \textbf{EGNOS} \newline
+Die Weiterentwicklung von EGNOS konzentriert sich hauptsächlich auf einen kombinierten Verbrauch von Galileo und EGNOS.
+\item \textbf{Kombination mit Alternativen} \newline
+Galileo wird kompatibel zu anderen Navigationssysteme, um einen kombinierten Gebrauch anzubieten.
+\end{enumerate}
+\parindent0pt 
+Der Satellite-Only Service teilt sich wiederum in fünf weitere Dienste ein. In vier verschiedenen Navigationsdiensten und einem Dienst, das zur Unterstützung von Such- und Rettungsaufgaben behilflich sein soll. 
+\subsection{Open Service (OS)}
+Der Open Service steht für alle kostenlos zur Verfügung. Dieser Dienst ist für den Massenmarkt gedacht, um Positions- und Zeitdaten zu ermitteln. Bei der Übertragung laufen sechs unverschlüsselte Signale über drei verschiedenen Frequenzen. Durch die Benutzung von verschiedenen Signale und Frequenzen wird die Leistung erhöht und das Risiko auf Störungen minimiert. Die Frequenzbänder überlappen sich mit den Frequenzbänder anderer Navigationssystemanbieter, um die Kompatibilität zu gewährleisten. Dieser Dienst besitzt keine Integritätsinformation und somit keine Garantie des Dienstes sowie keine Haftung auf erhaltene Informationen. Dieses Problem kann durch die Implementation der RAIM\footnote{Dient zur Überprüfung der Integrität von Signalen} Technik im Empfangsgerät gelöst werden. 
+Dieser Dienst soll im Jahr 2014/2015 implementiert und somit nutzbar sein.
+\subsection{Commercial Service (CS)}
+Der kommerzielle Dienst wird kostenpflichtig sein und ist für den professionellen Endanwender gedacht. Die Daten werden verschlüsselt und mit einer Geschwindigkeit von 500 Bits pro Sekunde gesendet. Zusätzlich werden Nachrichten auf allen unterstützen Frequenzbänder mitgesendet, somit ist es nicht nötig den Empfänger mit RAIM Technik auszustatten. 
+\newpage
+\subsection{Safety-of-Life Service (SoL)}
+Der Safety-of-Life Service wurde hauptsächlich für den öffentlichen Verkehr\footnote{Luft- und Schifffahrt, sowie Eisenbahnen} konzipiert. Es sendet auf den gleichen Signalen wie der Open Service. Zusätzlich sendet dieser Dienst die Integritätsinformationen mit und bietet den Benutzer somit eine Garantie des Dienstes an. Durch die Integritätsinformationen werden die Benutzer bei Systemfehler rechtzeitig benachrichtigt. Um die Signale besser zu schützen, wurden Frequenzen ausserhalb des Flugnavigationsfunkdienstes gewählt. 
+\subsection{Public Regulated Service (PRS)}
+Das Ziel des Public Regulated Service ist es einen verschlüsselten Dienst, während einer Krise oder dem Ausfall der anderen Dienste, anzubieten. Dieser Dienst läuft auf zwei getrennte Frequenzbänder, um die Verwundbarkeit zu minimieren. Der Zugriff zu den Signalen ist nur für die europäische Behörden für Zivilschutz und nationale Sicherheit sowie dem Europäischen Polizeiamt gestattet. Die Leistung ist mit der des OS Dienstes gleichzusetzen und die Integrität mit der Integrität des SoL Dienstes.
+Dieser Dienst soll im Jahr 2014/2015 implementiert und somit nutzbar sein.
+\subsection{Search and Rescue Service (SAR)}
+Der SAR Dienst ist die europäische Beteiligung an den COSPAS-SARSAT\footnote{Ein internationales, satellitengestütztes Such- und Rettungssystem zur Erfassung und Lokalisierung von Notrufen}. Die Notrufe werden abgefangen und einer SAR Bodenstation weitergeleitet. Die Genauigkeit wird durch verschiedene Techniken von 5 km auf ein paar Meter innerhalb von zehn Minuten verbessert. Abschliessend wird der Notruf zu einer lokalen Rettungszentrale gesendet, welche das zuständige Rettungsteam alarmiert. Die Verfügbarkeit dieses Dienstes soll 99.7 \% betragen.
+Dieser Dienst soll im Jahr 2014/2015 implementiert und somit nutzbar sein.
+\newpage
+\section{Technik}
+Die Architektur von Galileo ist mit der von GPS vergleichbar. Galileo hat drei Hauptkomponente und ein Nutzersegment.
+\begin{figure}[htbp]
+\centering
+\includegraphics{architektur.jpg}
+\caption{Architektur von Galileo}
+\label{fig:architektur}
+\end{figure}
+\subsection{Globale Komponente}
+Die globale Komponente bildet das Kernstück des Systems. Sie besteht aus dem Weltraumsegment und dem Bodensegment.
+\subsubsection{Weltraumsegment}
+Das Weltraumsegment besteht aus den Satelliten. Es werden 30 Satelliten in einer Höhe von 23'222 Kilometer um die Erde schweben. Diese 30 Satelliten werden auf drei Umlaufbahnen verteilt, die jeweils einen Neigungswinkel von 56 Grad zum Erdäquator haben. Jede Umlaufbahn besitzt neun Operativ- und einen Reservesatellit. Die technischen Daten der bereits gestarteten Satelliten befinden sich im Anhang.
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=5cm]{umlaufbahn.jpg}
+\caption{Umlaufbahnen der Satelliten}
+\label{fig:Umlaufbahn}
+\end{figure}
+\newpage
+\subsubsection{Bodensegment} 
+Das Herzstück des Bodensegments sind die beiden Galileo-Kontrollzentren. Die Kontrollzentren befinden sich in Deutschland und Italien. Sie sorgen für den Zustand der Satelliten und die Aufrechterhaltung der Satellitenkonstellation sowie für das Navigations- und Zeitmesssystem.
+Dem Bodensegment steht ein globales Netz von 30 Sensorstationen zur Verfügung. Diese Sensoren überwachen sämtliche Navigationssignale der Satelliten. Die gesammelten Daten werden laufend an beide Galileo-Kontrollzentren gesendet. Dort werden die Daten verarbeitet und daraus Navigations- und Integritätsmeldungen erstellt, die an die Satelliten gesendet werden. Die Satelliten erzeugen durch die gesammelten Daten die ihre eigenen Signale und senden sie an den Endanwender.
+\subsection{Regionale Komponente}
+Die regionale Komponente kann von Organisationen und Ländern ausserhalb von Europa eingerichtet und betrieben werden. Eine regionale Komponente verfügt über ein zusätzliches Netzwerk von Stationen, um die Integrität der Satellitensignale zu überwachen, und ein Rechenzentrum, welches diese Dienste unterstützt. Dadurch können in Partnerschaft mit anderen Ländern Integritätsinformationen ermittelt werden.
+\subsection{Lokale Komponente}
+Mit der lokalen Komponente kann das Leistungsangebot von Galileo vor Ort ergänzt werden. Die lokale Komponente bietet folgende Dienste an:
+\begin{itemize}
+\item \textbf{Local Precision Navigation Elements} \newline
+Stellen differentielle Datensignale zur Verfügung\footnote{durch Rundfunk, GSM oder UMTS}, welche der Nutzer heranziehen kann, um die gemessenen Distanzen wegen Bahnfehler, Uhrenfehler und anderen Einflüsse zu korrigieren. Ausserdem kann die Integritätsinformation verbessert werden.
+\item \textbf{Local High-Precision Elements} \newline
+Stellen ebenfalls differentielle Datensignale\footnote{Verweis auf 9} zur Verfügung, welche Nutzer mit Empfängern für drei Trägerwellen\footnote{Kann E1, E6 und E5 Signale empfangen} in den Stand versetzt, die gemessenen Distanzen wegen Bahnfehler, Uhrenfehler und anderen Einflüsse zu korrigieren.
+\item \textbf{Local Assisted Navigation Elements} \newline
+Können Datenübertragungseinrichtungen\footnote{Verweis auf 9} enthalten, um den Nutzer in schwieriger Umgebung bei der Positionsermittlung zu unterstützen.
+\item \textbf{Local Augmented  Availability Navigation Element} \\
+Stellen Signale zur Verfügung, die wie Signale von Satelliten genutzt werden können. Damit werden Positionsermittlungen in Gebieten möglich, in denen Satelliten durch Objekte abgeschattet werden.
+\end{itemize}
+\subsection{Nutzersegment}
+Im Nutzersegment befinden sich Empfangsgeräte, welche die gesendeten Signale der Satelliten empfangen können.
+\subsection{Signale}
+Die Frequenz der Signale wurde so gesetzt, dass Kompatibilität zwischen Galileo und den schon vorhandenen GNSS gewährleistet ist.
+\newline
+\newline
+\cite{1}
+\begin{tabular}{|l|l|l|l|l|}
+
+\hline
+\textbf{Link} & \textbf{Dienste} & \textbf{Datenrate[bps]} & \textbf{Andere GNSS} & \textbf{Frequenz}\\
+\hline
+\multirow{2}{*}{E1} & PRS & 50 & \multirow{2}{*}{GPS L1} & \multirow{2}{*}{1'575.420 MHz} \\ & OS/CS/SoL & 125 && \\ \hline
+\multirow{2}{*}{E6} & PRS & 50 & \multirow{2}{*}{ } & \multirow{2}{*}{1'278.750 MHz} \\ & CS & 500 && \\ \hline
+\multirow{2}{*}{E5} & OS/CS & 25 & \multirow{2}{*}{ } & \multirow{2}{*}{1'191.795 MHz} \\ & OS/CS/SoL & 125 && \\ \hline
+E5a & \multicolumn{2}{|l|}{-}  & GPS L5 & 1'176.450 MHz \\ \hline 
+E5b & \multicolumn{2}{|l|}{-} & GLONASS G3 & 1'207.140 MHz \\ \hline 
+\end{tabular}
+\newline
+\newline
+\newline
+Die Frequenzbänder E5a und E5b befinden sich im Frequenzband von E5 und bieten somit die gleichen Dienste an.
+\newpage
+\section{Galileo und andere GNSS}
+\subsection{Vergleich}
+Neben Galileo gibt es noch andere GNSS. Auf der unteren Tabelle ist ein Vergleich zwischen den drei wichtigsten GNSS ersichtlich. 
+\begin{center}
+\cite{1}
+\begin{tabular}{|l|l|l|l|}
+\hline
+& \textbf{Galileo} & \textbf{GPS} & \textbf{GLONASS} \\ \hline
+Erster Start & 28. Dezember 2005 & 22. Februar 1978 & 12. Oktober 1982 \\ \hline
+FOC & circa 2020 & 17. Juli 1995 & 18. Januar 1996 \\ \hline
+Anzahl der Satelliten & 27 + 3 Reserve & 24 + 3 Reserve & 24 + 3 Reserve \\ \hline
+Distanz zur Erde & 23'222 km & 20'200 km & 19'100 km \\ \hline
+Anzahl der Umlaufbahnen & 3 & 6 & 3 \\ \hline
+Neigungswinkel zum Äquator & 56 ° & 55 ° & 64.8 °  \\ \hline
+Winkel zwischen Umlaufbahnen & 120 ° & 60 ° & 120 ° \\ \hline
+Winkel zwischen Satelliten & +/- 40 ° & unregelmässig & +/- 30 ° \\ \hline
+Zeit um die Erde zu umkreisen & 14 h 4.75 min & 11 h 57.96 min & 11 h 15.73 min \\ \hline
+\multirow{6}{*}{Frequenz} & E1: 1575.420 & L1: 1575.420 & G1: 1602.000 \\ 
+& E6: 1278.750 & L2: 1227.600 & G2: 1246.000 \\ 
+& E5: 1191.795 & L5: 1176.450 & G3: 1207.104 \\ 
+& E5a: 1176.450 & - & - \\
+& E5b: 1207.104 & - & - \\ \hline
+Integritätsübertragung & Ja & Ja, ab GPS III & Ja, mit GLONASS-K \\ \hline
+\multirow{2}{*}{Genauigkeit} & H: \textless 4 Meter & H: \textless 10 Meter & H: \textless 5 Meter \\
+& V: \textless 8 Meter & V: 20 Meter & V: 10 Meter \\ \hline
+\multirow{2}{*}{Genauigkeit mit Erweiterung} & H: 0.1 - 1 Meter & H: 1 - 3 Meter & - \\
+& V: 1 - 3 Meter & V: \textless 3 Meter & - \\ \hline 
+\end{tabular}
+\end{center}
+Diese Tabelle enthält die Werte vor der Weiterentwicklung von GPS und GLONASS. In dieser Zeit stach Galileo als das präziseste GNSS hervor. Heute sind was Genauigkeit anbelangt alle drei GNSS auf gleicher Höhe. Die zwei anderen GNSS sind mit neueren Satelliten und zugleich mehr Satelliten erweitert worden und haben dadurch aufgeholt. \newline
+\newline
+Die Werte Distanz zur Erde, Winkel zwischen den Satelliten und Winkel zwischen den Umlaufbahnen wurden bei Galileo mit neuesten Mittel berechnet. Dadurch wird ein Empfang mit der Hilfe von vier Satelliten von überall auf der Erde möglich, abgesehen von den Polkappen. Für diese Region ist der Neigungswinkel zum Äquator zu klein.\footnote{Bei einem Neigungswinkel von 90° würde der Satellit senkrecht über die Polkappen schweben}
+\newpage
+\subsection{Kombination der verschiedenen GNSS}
+Galileo wurde nicht nur als Konkurrenzprodukt zu anderen GNSS entwickelt. Es lässt sich mit GPS und GLONASS kombinieren. Galileo benutzt beim Dienst OS mit Absicht, in zwei Frequenzbänder die gleichen Frequenzen wie GPS und GLONASS. Durch die Kombination von zwei GNSS lässt sich die Genauigkeit der Positionsermittlung steigern. Zusätzlich stehen mehr Satelliten zur Verfügung. Dadurch wird die Ermittlung der Position praktisch von überall aus möglich sein. Die Geräte müssen für die Kombination konfiguriert sein, jedoch ist das bei der Kombination von GPS und Galileo ziemlich einfach und auch nicht teuer.
+\subsection{China und Europa}
+In der Definitionsphase entschied man sich für eine Kooperation mit China. China sagte dadurch einer Beteiligung von 200 Millionen Euro am Projekt zu. Von der europäischen Seite gab es aber Sicherheitsbedenken, den Chinesen den Zugang zu heiklen Technologien zu gewähren. Im Jahr 2007 wurde China in ein wichtiges Gremium von Galileo nicht eingeladen. Die Folge daraus war, das China mit der Planung eines eigenen GNSS begann.\footnote{Compass} Leider hat China die gleiche Frequenz reserviert, die Galileo für das PRS benötigt. Dies bedeutet das die EU in einem Kriegsfall das PRS nicht ausschalten kann, da die Frequenz dadurch in Chinas Besitz wäre. Nach der Regeln der Internationalen Telekommunikationsunion gelangt jenes Land in den Besitz der reservierten Frequenz, die als erste es mit einem funktionsfähigen System benutzt. Zurzeit wird sie weder von China noch von der EU genutzt. \cite{6}
+\section{Pro und Contra}
+\textbf{Pro}
+\begin{itemize}
+\item Europa wird in der Navigations- und Zeitmesstechnik unabhängig.
+\item Durch die Kombination von Galileo mit GPS oder GLONASS wird der Fehler der Positionsvermittlung auf unter einen Meter fallen.
+\item Es werden hundertausende neue Stellen in der Europäischen Union kreiert.
+\end{itemize}
+\textbf{Contra}
+\begin{itemize}
+\item Das Projekt ist teuer und wird hauptsächlich von der EU finanziert, die im Moment selber finanzielle Schwierigkeiten hat.
+\item Es stehen schon genügend GNSS zur Verfügung.
+\item Die geschätzen Kosten für das gesamte Projekt wurden schon verbraucht, neue Schätzungen gehen von doppelt so hohen Kosten aus.
+\end{itemize}
+
+
+\section{Ausblick}
+Die Phase für die Fertigstellung und den Betrieb von Galileo ist gestartet. Wie bereits erwähnt, werden Ende Jahr die nächsten zwei Satelliten in Betrieb genommen. Der nächste grosse Meilenstein ist die IOC\footnote{Initial Operational Capability}. Die IOC ist erreicht sobald sich 18 Satelliten in den Umlaufbahnen befinden. Pro Umlaufbahn sechs Satelliten. Die IOC wird, falls alles nach Plan verläuft, im Jahr 2015 erreicht. Die restlichen 14 Satelliten sind zurzeit in der Entwicklung. Einen Teil stellt die Firma Surrey Satellite Technology Ltd in England her und der andere Teil die OHB in Bremen.
+\newline
+\newline
+Die komplette Konstellation mit 30 Satelliten und somit die Bereitstellung aller Dienste soll spätestens im Jahr 2020 erreicht werden. \newline
+\newline
+Die Forschung der ESA bleibt auch nicht stehen. Die ESA untersucht gerade bessere Navigationsmethoden in der Arktis. Eine weitere Abteilung kümmert sich um die Entwicklung genauerer Atomuhren.
+
+\newpage
+\section{Anhang}
+\subsection{Zeitaufwand}
+\begin{tabular}{|l l l|}
+\hline
+Arbeitsschritt & Schätzung in h & Benötigt in h \\ \hline
+\textbf{Planung} & \textbf{15} & \textbf{19} \\ \hline
+ - Auswahl des Themas & 3 & 2 \\
+ - In EBS eingetragen & 2 & 2 \\ 
+ - Informationen sammeln & 10 & 15 \\ \hline
+\textbf{Realisierung} & \textbf{35} & \textbf{54} \\ \hline
+ - Einführung in der Anwendung von Latex & 5 & 8 \\ 
+ - Teaser & 5 & 6 \\
+ - Arbeit geschrieben & 25 & 40 \\ \hline
+\textbf{Präsentation} & \textbf{10} & \textbf{?} \\ \hline
+ - Präsentation erstellen & 8 & ? \\
+ - Präsentation vorbereiten & 2 & ? \\ \hline \hline
+\textbf{Total} & \textbf{60} & \textbf{\textgreater 73} \\ \hline
+\end{tabular}
+
+\subsection{Datenblatt der Satelliten}
+\cite{8}
+\begin{tabular}{l l l}
+& GIOVE A & GIOVE B \\ 
+Abmessungen & 1.30 m x 1.8 m x 1.65 m & 0.95 m x 0.95 m x 2.4 m \\
+Startmasse & 600 kg & 530 kg \\
+Elektrische Leistung & 700 W & 1100 W \\
+Start & 28. Dezember 2005 & 26. April 2008 \\
+Ausserbetriebnahme & 3. Juli 2012 & 23. Juli 2012 \\
+Betriebsdauer & 2 Jahre & 2 Jahre \\
+\end{tabular}
+\newline
+\newline
+\newline
+\cite{8}
+\begin{tabular}{|l|l|l|}
+& IOV Satelliten & Satellit 1 - 22 \\
+Abmessungen & \multicolumn{2}{l|}{2.7 m x 1.1 m x 1.2 m}  \\
+Startmasse & \multicolumn{2}{l|}{700 kg} \\
+Elektrische Leistung & \multicolumn{2}{l|}{1600 W} \\
+\multirow{2}{*}{Starttermin} & 21. Oktober 2011\tnote{IOV 1,2}, & \multirow{2}{*}{2013 - ?} \\
+& 12. Oktober 2012\tnote{IOV 3,4} & \\
+Betriebsdauer & \multicolumn{2}{l|}{über 12 Jahre} \\
+\end{tabular}
+\newpage
+\begin{thebibliography}{9}
+\bibitem{1} 
+	Bernhard Hofmann-Wellenhof et al (2007):
+	\emph{GNSS - Global Navigation Satellite System GPS, GLONASS, Galileo and more},
+	SpringerWienNewYork,
+\bibitem{2}
+	Heribert Kahmen (2006):
+	\emph{Angewandte Geodäsie: Vermessungskunde},
+	Walter de Gruyter Berlin,
+\bibitem{3}
+	Eberhard F. Wassermann (2011): Navigieren mit Satellit:GPS (11.11.2011)
+	http://www.weltderphysik.de/gebiet/planeten/erde/gps/ \newline
+	[Stand: 20. Dezember 2012]
+\bibitem{4}
+	Galileo - What do we want to achieve ? - Satellite navigation - Enterprise and Industry
+	http://ec.europa.eu/enterprise/policies/satnav/galileo/
+\bibitem{5}
+	What is Galileo? / The future - Galileo / Navigation / Our Activities / ESA
+	http://www.esa.int/Our\_Activities/Navigation/The\_future\_-\_Galileo/What\_is\_Galileo
+\bibitem{6}
+	dpa/mp (2011): China funkt bei "Galileo" dazwischen, Scheidende Partner streiten über die Frequenzen
+	http://www.3sat.de/page/?source=/nano/technik/157799/index.html [Stand: 6. Januar 2013]
+\bibitem{7}
+	Spaces in images - Abbildung 3 und Titelbild \newline
+	http://www.satellite-navigation.eu/
+\bibitem{8}
+	Andrew Wilson (2007): Die ersten vier Galileo Satelliten (Januar 2007)
+ 	http://www.esa.int/esapub/br/br251/br251d.pdf [Stand: 12. Dezember 2012]
+\end{thebibliography}
+\end{document}
