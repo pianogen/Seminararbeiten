@@ -43,7 +43,7 @@ if ($_GET['ctrl'] === "update"){
 	<div>
 		<div id="nav">
 			<div style="padding: 100px 0px 0px 10px;">
-				<a href="index.php">Suchen</a>
+				<a href="index.php?ctrl=basex&action=select">Suchen</a>
 			</div>
 			<div style="padding: 20px 0px 0px 10px;">
 				<a href="index.php?ctrl=basex&action=create">Kontakt hinzufügen/entfernen</a>

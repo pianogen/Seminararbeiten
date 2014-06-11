@@ -32,7 +32,7 @@ class resolver {
 		//more error handling is needed
 		include_once 'mdl/class.' . $this->get['ctrl'] . '.php';
 		$mdl_name = 'mdl_' . $this->get['ctrl'];
-		$mdl = new $mdl_name( "localhost","1984","admin","admin" );
+		$mdl = new $mdl_name( "localhost","1984","admin","urc#12230" );
 		//include the controller, create an instance and execute the action
 		//more error handling is needed
 		include_once 'ctrl/' . $this->get['ctrl'] . '.php';

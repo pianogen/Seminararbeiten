@@ -15,14 +15,10 @@ class basex {
 	public function view() {
 		$this->basex->execute("open contacts");
 		$result=array();
-		$search = strtoupper($_POST['titel']);
-		$result['person'] = $this->basex->execute("xquery //contact[(@name='".$search."') or (@code='".$search."')]//person//text()");
-		$result['street'] = $this->basex->execute("xquery //contact[(@name='".$search."') or (@code='".$search."')]//street");
-		$result['plz'] = $this->basex->execute("xquery //contact[(@name='".$search."') or (@code='".$search."')]//plz");
-		$result['city'] = $this->basex->execute("xquery //contact[(@name='".$search."') or (@code='".$search."')]//city");
-		$result['mail'] = $this->basex->execute("xquery //contact[(@name='".$search."') or (@code='".$search."')]//mail");
-		$result['number'] = $this->basex->execute("xquery //contact[(@name='".$search."') or (@code='".$search."')]//number");
-		$result['provider'] = $this->basex->execute("xquery //contact[(@name='".$search."') or (@code='".$search."')]//provider");
+		$search = $_POST['titel'];
+		$test = $this->basex->execute("xquery //contact[(@name='".$search."') or (@code='".strtoupper($search)."')]");
+		$test = "<root>" . $test . "</root>";
+		$test = simplexml_load_string($test);
 		$this->basex->close();
 		include_once 'view/view_search_result.php';
 	}
@@ -65,29 +61,46 @@ class basex {
 	{
 		include_once 'mdl/class.xml.php';
 		$add = new XmlClass();
-		$xml = simplexml_load_file($_POST['Datei']);
-		$this->basex->execute("open contacts");
-		$exist = $this->basex->execute("xquery //contact[(@code='".strtoupper(substr($_POST['Datei'], -7, 3))."')]");
-		if ($add->checkSchema($xml->asXml())) {
-			if ($exist == "")
-				$this->basex->add(strtoupper(substr($_POST['Datei'], -7)),$xml->asXml());
-			else
-				$this->basex->replace(strtoupper(substr($_POST['Datei'], -7)),$xml->asXml());
+		if ($_POST["Datei"] != "") {
+			$xml = simplexml_load_file($_POST['Datei']);
+			$this->basex->execute("open contacts");
+			$exist = $this->basex->execute("xquery //contact[(@code='".strtoupper(substr($_POST['Datei'], -7, 3))."')]");
+			if ($add->checkSchema($xml->asXml())) {
+				if ($exist == "")
+					$this->basex->add(strtoupper(substr($_POST['Datei'], -7)),$xml->asXml());
+				else
+					$this->basex->replace(strtoupper(substr($_POST['Datei'], -7)),$xml->asXml());
+			}
+			else 
+			{
+				$schemaFailed = "yes";
+			}
+			$this->basex->close();
 		}
-		else 
+		else
 		{
-			$schemaFailed = "yes";
+			$nofile = true;
 		}
-		$this->basex->close();
 		include_once 'view/view_create_result.php';
 	}
 	
 	public function delete() {
-		$search = strtoupper($_POST['titel']);
-		$this->basex->execute("open contacts");
-		$this->basex->execute("xquery delete node //contact[(@name='".$search."') or (@code='".$search."')]");
-		$delete = "yes";
-		$this->basex->close();
+		$search = $_POST['titel'];
+		if ($search != "") {
+			$this->basex->execute("open contacts");
+			if ($this->basex->execute("xquery //contact[(@name='".$search."') or (@code='".strtoupper($search)."')]") != "") {
+				$this->basex->execute("xquery delete node //contact[(@name='".$search."') or (@code='".$search."')]");
+				$delete = "yes";
+			}
+			else
+			{
+				$delete = "no";
+			}
+			$this->basex->close();
+		}
+		else {
+			$nofile = true;
+		}
 		include_once 'view/view_create_result.php';
 	}
 	 
